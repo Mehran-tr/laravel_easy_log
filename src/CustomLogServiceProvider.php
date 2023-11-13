@@ -10,7 +10,7 @@ class CustomLogServiceProvider extends ServiceProvider
     public function boot()
     {
         // Assuming the service provider is located directly inside the src/ directory
-        $migrationPath = __DIR__ . '/easy_log/../../database/migrations';
+        $migrationPath = __DIR__ . '../database/migrations';
 
         // Load the migrations
         $this->loadMigrationsFrom($migrationPath);
