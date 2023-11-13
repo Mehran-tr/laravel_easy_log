@@ -1,30 +1,52 @@
-# Laravel Custom Easy Log Package
 
-This Laravel package provides a simple and effective way to log messages to a database. It creates a `custom_log` table where logs are stored. The package is easy to install and integrates seamlessly with any Laravel application.
+## Laravel Easy Log Package
 
-## Features
+### Description
+Laravel Easy Log is a custom logging package for Laravel applications, allowing easy logging of messages with various levels (such as error, info, and success) to a database. It's particularly useful for tracking application behavior and user-specific actions.
 
-- Easy installation and setup.
-- Custom `custom_log` table for storing logs.
-- Supports different log types: error, success, info.
-- Optional user and route information for more detailed logging.
+### Features
+- Logs messages with different types (error, success, info).
+- Optionally associates logs with user IDs and routes.
+- Stores logs in a dedicated `custom_log` database table.
 
-## Installation
+### Requirements
+- PHP >= 7.3
+- Laravel 6.x, 7.x, , 8.x , 9.0x or 10.x
 
-1. **Require the package using Composer:**
+### Installation
 
-2. **Publish the migrations:**
+1. **Require the Package**  
+   Use Composer to install the package. Run the following command in your Laravel project:
+   ```bash
+   composer require laravel_easy_log/easy_log
+   ```
 
-3. **Run the migrations:**
+2. **Run Migrations**  
+   Publish and run the migrations to create the `custom_log` table in your database:
+   ```bash
+   php artisan vendor:publish --provider="LaravelEasyLog\EasyLog\CustomLogServiceProvider" --tag="migrations"
+   php artisan migrate
+   ```
 
-## Usage
+3. **Configuration** (Optional)  
+   If you want to customize the package, you can publish the configuration file:
+   ```bash
+   php artisan vendor:publish --provider="LaravelEasyLog\EasyLog\CustomLogServiceProvider" --tag="config"
+   ```
 
-After installing the package, you can use Laravel's built-in logging features to log messages to the `custom_log` table. The table includes `user_id`, `message`, `type`, and `route` fields to provide detailed context for each log entry.
+### Usage
+After installing the package, you can log messages like this:
 
-## Contributing
+```php
+use LaravelEasyLog\EasyLog\Facades\CustomLogger;
 
-Contributions are welcome! Please feel free to submit pull requests or create issues for bugs and feature requests.
+CustomLogger::log($userId, 'Your log message', 'info', request()->path());
+```
 
-## License
+### Contributing
+Contributions to the Laravel Easy Log package are welcome. Please follow the standard procedures for contributing to open-source projects.
 
+### License
 This package is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+
+---
