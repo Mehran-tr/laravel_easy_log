@@ -5,7 +5,7 @@ namespace LaravelEasyLog\EasyLog;
 
 use Illuminate\Support\ServiceProvider;
 
-class CustomLoggerServiceProvider extends ServiceProvider
+class CustomLogServiceProvider extends ServiceProvider
 {
     public function boot()
     {

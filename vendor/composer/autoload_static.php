@@ -7,14 +7,14 @@ namespace Composer\Autoload;
 class ComposerStaticInit7a81e86da9f155d947451c773deeaa6d
 {
     public static $prefixLengthsPsr4 = array (
-        'l' => 
+        'L' => 
         array (
-            'laravel_easy_log\\easy-log\\' => 26,
+            'LaravelEasyLog\\EasyLog\\' => 23,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'laravel_easy_log\\easy-log\\' => 
+        'LaravelEasyLog\\EasyLog\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),

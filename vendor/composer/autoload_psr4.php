@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'laravel_easy_log\\easy-log\\' => array($baseDir . '/src'),
+    'LaravelEasyLog\\EasyLog\\' => array($baseDir . '/src'),
 );
