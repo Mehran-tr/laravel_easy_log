@@ -1,0 +1,27 @@
+{
+    "name": "laravel_easy_log/easy_log",
+    "description": "A package for logging in Laravel",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "laravel_easy_log\\easy-log\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mehran Taheri",
+            "email": "mehran.taheri.t@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "laravel_easy_log\\easy_log\\CustomLogServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "php": "^7.3|^8.0",
+        "illuminate/support": "^6|^7|^8"
+    }
+}
