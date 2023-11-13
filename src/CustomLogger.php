@@ -1,6 +1,7 @@
 <?php
 
-namespace laravel_easy_log\easy_log;
+namespace LaravelEasyLog\EasyLog;
+
 class CustomLogger
 {
     public function log($userId, $message, $type, $route = null)

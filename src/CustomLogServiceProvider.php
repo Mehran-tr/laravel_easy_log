@@ -1,6 +1,7 @@
 <?php
 
-namespace laravel_easy_log\easy_log;
+namespace LaravelEasyLog\EasyLog;
+
 
 use Illuminate\Support\ServiceProvider;
 
