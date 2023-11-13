@@ -4,8 +4,13 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLaravelEasyLogCustomLogTable extends Migration
+return new class extends Migration
 {
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
     public function up()
     {
         Schema::create('custom_logs', function (Blueprint $table) {
@@ -22,4 +27,4 @@ class CreateLaravelEasyLogCustomLogTable extends Migration
     {
         Schema::dropIfExists('custom_logs');
     }
-}
+};
