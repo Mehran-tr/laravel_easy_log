@@ -1,6 +1,7 @@
 {
     "name": "laravel_easy_log/easy_log",
     "description": "A package for logging in Laravel",
+    "license": "MIT",
     "type": "library",
     "autoload": {
         "psr-4": {
